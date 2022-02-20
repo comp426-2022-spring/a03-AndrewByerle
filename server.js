@@ -13,15 +13,12 @@ function coinFlip() {
   }
 
 function coinFlips(flips) {
-    // if (flips < 0){
-    //   console.error("cant have less than 0 flips");
-    // }
+
     let array = [];
     for (let i=0; i<flips; i++){
       array.push(coinFlip());
     }
     return array;
-    // return Array(flips).fill(0).map(x => coinFlip());
 }
 
 function countFlips(array) {
