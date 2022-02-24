@@ -71,7 +71,11 @@ app.get('/app/flip', (req, res) => {
 })
 
 app.get('/app/flip/call/:x', (req, res) => {
-    res.status(200).json(flipACoin(req.param.x))
+    res.status(200).json(flipACoin(req.params.x))
+})
+
+app.get('/app/flip/call/:guess(heads|tails)/', (req, res) => {
+  res.status(200).json(flipACoin(req.params.guess))
 })
 
 // Default Endpoint
